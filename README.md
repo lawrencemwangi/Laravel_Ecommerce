@@ -1,4 +1,4 @@
-# Laravel Ecommerce
+# Ecommerce
 
 ## Stack
 - Laravel -backend
