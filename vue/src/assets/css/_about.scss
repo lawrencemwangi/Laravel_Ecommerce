@@ -1,0 +1,117 @@
+p{
+    font-size:1.2em;
+}
+
+.about_container,.shop_content,
+.owner_container{
+    margin: 0 0 3em;
+}
+
+.shop_content{
+   @include grid(2);
+   text-align: center;
+
+    .time_cotent{
+        width: 80%;
+        height: 30vh;
+        box-shadow: 3px 3px 8px grey;
+        margin: 0 0 2em;
+        background: #cdcdcd77;
+        border-radius: 12px;
+    
+        p{
+            font-weight: 550;
+            line-height: 1.4;
+            padding:0.5em 0;
+            align-items: center;
+        }
+    }
+    .shop_image{
+        position: relative;
+
+        img{
+            width: 85%;
+            height: 50vh;
+            border-radius: 16px;
+            opacity: 0.9;
+        }
+        .shop_name{
+            position: absolute;
+            top:40%;
+            left: 20%;
+            font-weight: bold;
+            color:$secodary-color;
+
+            p{
+                font-size: 2em;
+            }
+
+            span{
+                font-size: 1.9em;
+            }
+        }
+    }  
+}
+
+.owner_container{
+     p{
+        margin: 0 0 1em;
+     }
+     .image_content{
+        text-align: center;
+        img{
+            width: 30%;
+            height: 75vh; 
+            border-radius: 16px;
+        }
+        span{
+            font-weight: bold;
+        }
+
+        i{
+            margin: 0 0.5em;
+            font-size: 1.5em;
+        }
+        i:hover{
+            color:$accent_color;
+        }
+     }
+}
+
+@media screen and (width <=726px){
+    .time_cotent{
+        width: 95%;
+    }
+    .shop_content{
+       .time_cotent{
+        width: 100%;
+        height: 20vh;
+
+        p{
+            font-size: 1.5em;
+           }
+       }
+       .shop_image{
+        img{
+            width: 100%;
+            height: 45vh;
+        }
+        .shop_name{
+            left:10%;
+            p{
+                font-size: 1.7em;
+            }
+           }
+       } 
+     
+    }
+    .owner_container{
+        .image_content{
+            img{
+                width: 90%;
+                height: 55vh;
+            }
+        }
+    }
+}
+ 

@@ -1,0 +1,25 @@
+.container{
+  .search{
+    text-align: center;
+    margin:0 0 2em;
+
+    input{
+        padding:0.6em 0.9em;
+        width: 30%;
+        border-radius: 16px;
+    }
+  }
+  .items_container{
+    margin:0 0 3em;
+  }
+}
+
+@media screen and (width <=726px){
+  .container{
+    .search{
+      input{
+        width:80%;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.hero_contanier{
+    height: 90vh;
+    .video{
+        height: 100%;
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+        }
+    }
+
+    .hero-content{
+        position: absolute;
+        left:1.3em;
+        top: 50%;
+        text-align: center;
+        color:$secodary-color;
+
+        h1{
+            font-size: 2.2em;
+        }
+    }
+
+}
+
+@media screen and (width <=726px){
+    .hero_contanier{
+        height: 55vh;
+
+        .video{
+            video{
+                opacity: 0.9;
+            }
+        }
+
+        .hero-content{
+            top:25%;
+            left: 6%;
+            width: 50%;
+            text-align: left;
+
+            h1{
+                font-size: 1.8em;
+            }
+        }
+    }
+}
