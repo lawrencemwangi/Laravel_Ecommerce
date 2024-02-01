@@ -1,0 +1,43 @@
+.Admin {
+    .admin_sidenav {
+        width: 15%;
+    }
+
+    .main_content {
+        margin-left: 15%;
+
+        .heading{
+            display:flex;
+            justify-content: space-between;
+            padding:0.5em 5%;
+        }
+
+        .table{
+            padding:0 0.9em;
+            table{
+                padding:0.9em 0;
+                
+                thead{
+                    background: $primary-color;
+                    color:$secodary-color;
+                    padding:0 0.9em;
+                }
+                tbody{
+                   tr{
+                    td{
+                        padding:0 4em;
+
+                        .fa-pencil-alt{
+                            color: green;
+                        }
+                        .fa-trash-alt{
+                            color:red;
+                        }
+                    }
+                   }
+                }
+            }
+        }
+
+    }
+}

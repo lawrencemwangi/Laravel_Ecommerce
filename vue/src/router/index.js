@@ -13,9 +13,19 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/category',
-      name: 'category',
-      component: () => import('../views/CategoryView.vue')
+      path: '/admin/category',
+      name: 'admin/category',
+      component: () => import('../views/admin/products/category/Categoryview.vue')
+    },
+    {
+      path:'/admin/category/update',
+      name: 'admin/category/update',
+      component: () =>import('../views/admin/products/category/UpdateView.vue')
+    },
+    {
+      path:'/admin/category/add',
+      name:'admin/category/add',
+      component: () =>import('../views/admin/products/category/AddView.vue')
     },
     {
       path:'/about',

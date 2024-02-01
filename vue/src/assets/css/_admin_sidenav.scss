@@ -1,0 +1,15 @@
+.admin_sidenav {
+    position: fixed;
+    padding:0.5em 0.9em;
+
+    .logo {
+        a{
+            @include grid(2);
+            img{
+                width:40px ;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 @import 'global';
 @import 'mixins';
 
-
+// Partials
 @import 'navbar';
 @import 'hero';
 @import 'items';
@@ -9,5 +9,8 @@
 @import 'shop';
 @import 'about';
 @import 'footer';
+@import 'admin_sidenav';
 
+// Main Pages
+@import 'admin';
 

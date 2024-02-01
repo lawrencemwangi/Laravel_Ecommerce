@@ -23,4 +23,17 @@ a{
     text-decoration: none;
     color:$primary-color;
 }
+.btn{
+    padding: 0.5em 0.9em;
+    color:$secodary-color;
+    background: $primary-color;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    a{
+        text-decoration: none;
+        color:$secodary-color;
+    }
+}
 
