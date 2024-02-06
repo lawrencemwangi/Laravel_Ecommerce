@@ -33,7 +33,7 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
-        if(!Auth::attemptgit($request->only('email', 'password'))) {
+        if(!Auth::attempt($request->only('email', 'password'))) {
             return response()->json(['message' => 'Invalid credentials.'], 401);
         }
 
