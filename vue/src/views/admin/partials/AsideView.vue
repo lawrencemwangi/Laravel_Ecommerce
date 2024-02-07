@@ -4,14 +4,22 @@
     <div class="admin_sidenav">
         <div class="logo">
             <a >
-                <img src="../../../assets/images/cup.jpg" alt="Shop logo" >
+                <img src="../../../assets/images/shop.jpg" alt="Shop logo" >
                 <h3>Coffee Shop</h3>
             </a>
         </div>
-        <div class="nav-links">
-            <li>Dashbord</li>
-            <li>Products</li>
-            <li></li>
+        <div class="nav_links">
+            <li><i class="fas fa-tachometer-alt"></i><router-link :to="{name:'admin-dashboard'}">Dashboard</router-link></li>
+            <li><i class="fas fa-tachometer-alt"></i><router-link :to="{name:'admin-admins'}">Admins</router-link></li>
+            <li><i class="fas fa-users"></i><router-link :to="{name:'admin-users'}">Users</router-link></li>
+            <li><i class=""></i> <router-link :to="{name:'admin-products'}">Products</router-link></li>
+            <li><i class=""></i><router-link :to="{name:'admin-location'}">Locations</router-link></li>
+            <li><i></i><router-link :to="{name:'admin-orders'}">Orders</router-link></li>
+        </div>
+
+        <div class="logout">
+            <img src="../../../assets/images/mwangi.jpg" alt="photo">
+            <button class="btn"><a href="#">Logout</a></button>
         </div>
     </div>
 </template>

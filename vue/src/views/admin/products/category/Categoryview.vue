@@ -15,8 +15,9 @@ onMounted(() => getCategories());
         <section class="main_content">
             <div class="heading">
                 <h1>Categories</h1>
+                <RouterLink :to="{ name:'admin-products' }">Products</RouterLink>
                 <button class="btn">
-                    <router-link :to="{name:'admin/category/add'}">  Add New</router-link>
+                    <router-link :to="{name:'admin-category-add'}">  Add New</router-link>
                 </button>
             </div>
 
@@ -34,9 +35,9 @@ onMounted(() => getCategories());
                         <tr v-for="category in categories" :key="category.id">
                             <td>{{ category.title }}</td>                            
                             <td>{{ category.slug }}</td>
-                            <td> <router-link :to ="{ name: 'admin/category/update' }">
-                                <i class="fas fa-pencil-alt"></i>
-                            </router-link></td>
+                            <td> <router-link :to ="{ name: 'admin-category-update' }">
+                                <i class="fas fa-pencil-alt"></i></router-link>
+                            </td>
                             <td><i class="fas fa-trash-alt"></i></td>
                         </tr>
                     </tbody>

@@ -1,0 +1,13 @@
+.custom_form{
+    .link{
+        text-align: left;
+    }
+    .register{
+        font-weight: bold;
+    }
+    .form_container{
+        box-shadow: 3px 3px 3px $primary-color;
+        padding: 0.9em 1em;
+        border-radius: 16px;
+    }
+}

@@ -14,6 +14,7 @@
             <li><router-link :to="{ name: 'shop' }">Shop</router-link></li>
             <li><router-link :to="{ name: 'about' }">About</router-link></li>
             <li><router-link :to="{ name: 'contact' }">Contact</router-link></li>
+            <li><router-link :to="{name: 'login'}">Login</router-link></li>
         </ul> 
         <div class="burger_menu">
             <div class="burger_icon" id="burgerIcon">

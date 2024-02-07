@@ -10,14 +10,14 @@
                 <p>P.O.Box 120-0100 ,Kaimbu</p>
             </div>
             <div class="link_content">
-                <h2>Links</h2>
+                <h1>Links</h1>
                 <a href="#">Home</a>
                 <a href="#">Shop</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
             </div>
             <div class="contact_content">
-                <h2>Contact</h2>
+                <h1>Contact</h1>
                 <p>lawrencecoffeshop@gmail.com</p>
                 <p>+254 799 509 242</p>
 

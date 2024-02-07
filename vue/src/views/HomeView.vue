@@ -2,6 +2,15 @@
 import Navbar from '../components/NavbarComponent.vue'
 import product from '../components/ProductComponent.vue'
 import Footer from '../components/FooterComponent.vue'
+
+import {ref, onMounted} from 'vue'
+import axios from 'axios'
+
+const user = ref()
+    onMounted(async () => {
+        const data = await axios.get("/api/user")
+        console.log(data)
+    });
 </script>
 
 <template>

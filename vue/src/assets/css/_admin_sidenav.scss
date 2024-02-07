@@ -1,15 +1,55 @@
 .admin_sidenav {
     position: fixed;
-    padding:0.5em 0.9em;
+    padding:0.8em 0.9em;
+    height: 100vh;
+    background:$primary-color;
+    color: $secodary-color;
 
     .logo {
+        cursor: pointer;
         a{
-            @include grid(2);
+           display: flex;
+           align-items: center;
+           color:$secodary-color;
+           gap:0.5em;
             img{
                 width:40px ;
-                height: 40px;
+                height:40px;
                 border-radius: 50%;
             }
+        }
+    }
+
+    .nav_links{
+        padding:0.5em 0.3em;
+      li{
+            list-style: none;
+            padding:0.9em 0;
+            border-bottom: 1px solid grey;
+
+            a{
+                text-decoration: none;
+                color:$secodary-color;
+                font-weight: bold;
+            }
+        }
+    }
+    .logout{
+        margin-top: 3em;
+        @include flex_center;
+        align-items: center;
+        padding: unset;
+        
+        img{
+            width: 60px;
+            height:60px;
+            border-radius:50%;
+        }
+
+        .btn{
+            background: $accent_color;
+            padding:0.5em 2em;
+            font-size:1em;
         }
     }
 }

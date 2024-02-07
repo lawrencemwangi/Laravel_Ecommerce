@@ -16,12 +16,14 @@ const form =reactive({
 
         <section class="main_content">
             <div class="custom_form">
+                <h1>Add Category</h1>
+                
                 <form action="" method="post" @submit.prevent="storeCategory(form)">
                     <div class="input_group">
                         <label for="title" >Title</label>
                         <input type="text" name="title" id="titel" v-model="form.title" autofocus>
                     </div>
-                    <button type="submit" class="btn">New Categroy</button>
+                    <button type="submit" class="btn">Save</button>
                 </form>
             </div>
         </section>

@@ -5,39 +5,67 @@
 
     .main_content {
         margin-left: 15%;
+        padding:0 1.3em;
 
         .heading{
-            display:flex;
-            justify-content: space-between;
-            padding:0.5em 5%;
-        }
+            @include grid(3);
+            gap:2em;
+            padding: 0.5em 0.9em;
 
-        .table{
-            padding:0 0.9em;
-            table{
-                padding:0.9em 0;
-                
-                thead{
-                    background: $primary-color;
-                    color:$secodary-color;
-                    padding:0 0.9em;
-                }
-                tbody{
-                   tr{
-                    td{
-                        padding:0 4em;
-
-                        .fa-pencil-alt{
-                            color: green;
-                        }
-                        .fa-trash-alt{
-                            color:red;
-                        }
-                    }
-                   }
-                }
+            input{
+                width: 80%;
+                padding:0.3em  0.5em;
+                border-radius: 20px;
+            }
+            .btn{
+                width: 30%;
+                margin-left:50%;
             }
         }
 
+        .table{
+            padding:0.9em 1.2em;
+
+            table{
+                width: 95%;
+                border-collapse: collapse;
+
+                thead{
+                    background: $primary-color;
+                    color:$secodary-color;
+                
+                    tr{
+                        th{
+                            padding:0.5em 0.3em;
+                            border-right: 2px solid $secodary-color;
+                            text-align: left;
+
+                            &:last-of-type{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                tbody{
+                    tr{
+                        border-bottom: 1px solid $primary-color;
+                        td{
+                            padding:0.3em 0.9em;
+
+                            &:last-child{
+                                text-align: center;
+                            }
+                            .fa-trash-alt{
+                                color:red;
+                            }
+                            .fa-pencil-alt{
+                                color:green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
