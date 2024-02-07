@@ -13,18 +13,17 @@ const errorMessage = ref()
 
 const handleLogin = async () => {
     try {
-        await axios.post('/login', form.value)
+        const response = await axios.post('/login', form.value)
         router.push('/')
     } catch (error) {
         console.error(error)
-        if (error.response && error.response.data && error.response.data.message) {
-            errorMessage.value = error.response.data.message;
+        if (error.response && error.response.data) {
+            errorMessage.value = error.response.data.message || "The data you provided doesn't match ours.";
         } else {
-            errorMessage.value = "The data you prodived doesn't match ours.";
+            errorMessage.value = "An error occurred while logging in. Please try again later.";
         }
     }
 };
-
 </script>
 
 
@@ -42,7 +41,7 @@ const handleLogin = async () => {
                 <input type="password" name="password" id="password" v-model="form.password" required/>
             </div>
             <button type="submit">Login</button>
-            <p>Don't have an account? <a href="/register" class="register">Register</a></p>
+            <p>Don't have an account?<RouterLink :to="{ name:'register'}">Register</RouterLink></p>
         </form>
     </div>
 </template>
