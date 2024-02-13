@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-section {
-  padding: 0.5em 0.9em;
+.container {
+  padding: 0.5em 5%;
   margin: 0 0 3em;
 }
-section h1 {
+.container h1 {
   padding: 0.9em 0;
   text-transform: uppercase;
 }
@@ -17,6 +17,25 @@ section h1 {
 a {
   text-decoration: none;
   color: #000;
+}
+
+.btn {
+  padding: 0.5em 0.9em;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fail {
+  padding: 0.3em 0.9em;
+  color: #000;
+  background: red;
 }
 
 .hello {
@@ -52,9 +71,6 @@ a {
 .hello ul li {
   list-style: none;
   padding: 0 0.9em;
-}
-.hello ul li a:hover {
-  color: #A3320B;
 }
 .hello .burger_menu {
   display: none;
@@ -145,6 +161,7 @@ a {
   width: 95%;
   box-shadow: 3px 3px 2px grey;
   border-radius: 8px;
+  margin: 0 0 3em;
 }
 .items_container .coffee-container .items_content {
   text-align: center;
@@ -207,22 +224,26 @@ a {
   flex-direction: column;
   justify-content: center;
   gap: 0.9em;
-  text-align: center;
 }
 .contact_container .conatct_content span {
   font-size: 1.4em;
+  font-weight: bold;
 }
 .contact_container .input_group .names {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 }
 .contact_container .input_group .input_content {
   position: relative;
-  padding: 0.9em 0;
+  padding: 0.8em 0;
 }
 .contact_container .input_group .input_content label {
   position: absolute;
   top: 15px;
   left: 5px;
+  transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
 .contact_container .input_group .input_content label i {
   padding: unset;
@@ -231,18 +252,158 @@ a {
 .contact_container .input_group input[type=text],
 .contact_container .input_group input[type=email],
 .contact_container .input_group textarea {
-  width: 80%;
-  padding: 0.5em 0;
+  width: 100%;
+  padding: 0.5em 1em;
   color: #000;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid grey;
+}
+.contact_container .input_group input[type=text]:focus,
+.contact_container .input_group input[type=email]:focus,
+.contact_container .input_group textarea:focus {
+  border: 1px solid red !important;
 }
 .contact_container .input_group input:focus ~ label,
 .contact_container .input_group input:valid ~ label,
 .contact_container .input_group textarea:focus ~ label,
 .contact_container .input_group textarea:valid ~ label {
-  top: -15px;
+  top: 1px;
+  opacity: 1;
+  background: white;
+  font-size: 0.85em;
+}
+.contact_container button {
+  padding: 0.8em 2em;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  border: none;
 }
 
+.container .search {
+  text-align: center;
+  margin: 0 0 2em;
+}
+.container .search input {
+  padding: 0.6em 0.9em;
+  width: 30%;
+  border-radius: 16px;
+}
+.container .items_container {
+  margin: 0 0 3em;
+}
+
+@media screen and (width <= 726px) {
+  .container .search input {
+    width: 80%;
+  }
+}
+p {
+  font-size: 1.2em;
+}
+
+.about_container, .shop_content,
+.owner_container {
+  margin: 0 0 3em;
+}
+
+.shop_content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  text-align: center;
+}
+@media screen and (width >= 726px) {
+  .shop_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.shop_content .time_cotent {
+  width: 80%;
+  height: 30vh;
+  box-shadow: 3px 3px 8px grey;
+  margin: 0 0 2em;
+  background: rgba(205, 205, 205, 0.4666666667);
+  border-radius: 12px;
+}
+.shop_content .time_cotent p {
+  font-weight: 550;
+  line-height: 1.4;
+  padding: 0.5em 0;
+  align-items: center;
+}
+.shop_content .shop_image {
+  position: relative;
+}
+.shop_content .shop_image img {
+  width: 85%;
+  height: 50vh;
+  border-radius: 16px;
+  opacity: 1;
+}
+.shop_content .shop_image .shop_name {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-weight: bold;
+  color: #fff;
+}
+.shop_content .shop_image .shop_name p {
+  font-size: 2em;
+}
+.shop_content .shop_image .shop_name span {
+  font-size: 1.9em;
+}
+
+.owner_container p {
+  margin: 0 0 1em;
+}
+.owner_container .image_content {
+  text-align: center;
+}
+.owner_container .image_content img {
+  width: 30%;
+  height: 75vh;
+  border-radius: 16px;
+}
+.owner_container .image_content span {
+  font-weight: bold;
+}
+.owner_container .image_content i {
+  margin: 0 0.5em;
+  font-size: 1.5em;
+}
+.owner_container .image_content i:hover {
+  color: #A3320B;
+}
+
+@media screen and (width <= 726px) {
+  .time_cotent {
+    width: 95%;
+  }
+  .shop_content .time_cotent {
+    width: 100%;
+    height: 20vh;
+  }
+  .shop_content .time_cotent p {
+    font-size: 1.5em;
+  }
+  .shop_content .shop_image img {
+    width: 100%;
+    height: 45vh;
+  }
+  .shop_content .shop_image .shop_name {
+    left: 10%;
+  }
+  .shop_content .shop_image .shop_name p {
+    font-size: 1.7em;
+  }
+  .owner_container .image_content img {
+    width: 90%;
+    height: 55vh;
+  }
+}
 .contant_container {
   display: grid;
   grid-template-columns: 1fr;
@@ -309,7 +470,7 @@ a {
   padding: 0.5em 0.6em;
   background: rgb(84, 83, 83);
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -318,6 +479,183 @@ a {
     align-items: unset;
   }
   .footer {
-    font-size: 1em;
+    font-size: 0.8em;
   }
+}
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.4em 0.6em;
+  font-size: 1em;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+form button {
+  padding: 10px 32px;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  margin: 0.3em 0 0;
+}
+
+.custom_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5em 0;
+}
+.custom_form form {
+  width: 40%;
+}
+.custom_form form .input_group {
+  padding: 0.3em 0;
+}
+.custom_form form .input_group label {
+  font-weight: 550;
+}
+
+@media screen and (width <= 726px) {
+  .custom_form {
+    padding: 9em 0;
+  }
+  .custom_form form {
+    width: 85%;
+  }
+}
+.admin_sidenav {
+  position: fixed;
+  padding: 0.8em 0.9em;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+}
+.admin_sidenav .logo {
+  cursor: pointer;
+}
+.admin_sidenav .logo a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 0.5em;
+}
+.admin_sidenav .logo a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.admin_sidenav .nav_links {
+  padding: 0.5em 0.3em;
+}
+.admin_sidenav .nav_links li {
+  list-style: none;
+  padding: 0.9em 0;
+  border-bottom: 1px solid grey;
+}
+.admin_sidenav .nav_links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.admin_sidenav .logout {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.9em;
+  align-items: center;
+  padding: unset;
+}
+.admin_sidenav .logout img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.admin_sidenav .logout .btn {
+  background: #A3320B;
+  padding: 0.5em 2em;
+  font-size: 1em;
+}
+
+.custom_form .link {
+  text-align: left;
+}
+.custom_form .register {
+  font-weight: bold;
+}
+.custom_form .form_container {
+  box-shadow: 3px 3px 3px #000;
+  padding: 0.9em 1em;
+  border-radius: 16px;
+}
+.custom_form .error {
+  color: red;
+  font-weight: bold;
+}
+
+.Admin .admin_sidenav {
+  width: 15%;
+}
+.Admin .main_content {
+  margin-left: 15%;
+  padding: 0 1.3em;
+}
+.Admin .main_content .heading {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  gap: 2em;
+  padding: 0.5em 0.9em;
+}
+@media screen and (width >= 726px) {
+  .Admin .main_content .heading {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.Admin .main_content .heading input {
+  width: 80%;
+  padding: 0.3em 0.5em;
+  border-radius: 20px;
+}
+.Admin .main_content .heading .btn {
+  width: 30%;
+  margin-left: 50%;
+}
+.Admin .main_content .table {
+  padding: 0.9em 1.2em;
+}
+.Admin .main_content .table table {
+  width: 95%;
+  border-collapse: collapse;
+}
+.Admin .main_content .table table thead {
+  background: #000;
+  color: #fff;
+}
+.Admin .main_content .table table thead tr th {
+  padding: 0.5em 0.3em;
+  border-right: 2px solid #fff;
+  text-align: left;
+}
+.Admin .main_content .table table thead tr th:last-of-type {
+  text-align: center;
+}
+.Admin .main_content .table table tbody tr {
+  border-bottom: 1px solid #000;
+}
+.Admin .main_content .table table tbody tr td {
+  padding: 0.3em 0.9em;
+}
+.Admin .main_content .table table tbody tr td:last-child {
+  text-align: center;
+}
+.Admin .main_content .table table tbody tr td .fa-trash-alt {
+  color: red;
+}
+.Admin .main_content .table table tbody tr td .fa-pencil-alt {
+  color: green;
 }/*# sourceMappingURL=style.css.map */

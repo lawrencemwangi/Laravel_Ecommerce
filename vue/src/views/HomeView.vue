@@ -4,12 +4,16 @@ import product from '../components/ProductComponent.vue'
 import Footer from '../components/FooterComponent.vue'
 
 import {ref, onMounted} from 'vue'
-import axios from 'axios'
+import store from '@/store'
 
-const user = ref()
-    onMounted(async () => {
-        const data = await axios.get("/api/user")
-        console.log(data)
+const user = ref('');
+
+onMounted(async () => {
+        await store.dispatch('getUser')
+        const userData = store.getters.user
+        if(userData) {
+            user.value = userData
+        }
     });
 </script>
 
@@ -24,6 +28,7 @@ const user = ref()
             </div>
             <div class="hero-content">
             <h1>Welcome to Lawrence Coffee shop</h1>
+            <p v-if="user">{{ user.name }}</p>
         </div>
         </div>
     </section>

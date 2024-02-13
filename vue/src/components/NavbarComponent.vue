@@ -1,4 +1,15 @@
 <script setup>
+import { useRouter } from 'vue-router';
+import store from '@/store'
+import {computed} from 'vue'
+
+const logout = () => {
+    store.dispatch('handleLogout'); 
+    useRouter().push({ name: 'login' });
+}
+
+const isLoggedIn = computed(() => store.getters.isLoggedIn)
+defineExpose({isLoggedIn, logout})
 </script>
 
 <template>
@@ -14,7 +25,13 @@
             <li><router-link :to="{ name: 'shop' }">Shop</router-link></li>
             <li><router-link :to="{ name: 'about' }">About</router-link></li>
             <li><router-link :to="{ name: 'contact' }">Contact</router-link></li>
-            <li><router-link :to="{name: 'login'}">Login</router-link></li>
+
+            <template v-if="!isLoggedIn">
+                <li><router-link :to="{name: 'login'}" class="btn">Login</router-link></li>
+            </template>
+            <template v-if="isLoggedIn">
+                <li><button @click="logout" class="btn logout">Logout</button></li>
+            </template>
         </ul> 
         <div class="burger_menu">
             <div class="burger_icon" id="burgerIcon">

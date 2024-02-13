@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import axios from '../axios';
+import axios from '@/axios';
 import { useRouter } from 'vue-router'
 
 const router =useRouter()
@@ -34,14 +34,15 @@ const handleLogin = async () => {
         <form  @submit.prevent="handleLogin" class="form_container">
             <div class="input_group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" v-model="form.email" required/>
+                <input type="email" name="email" id="email" v-model="form.email" placeholder="Email" />
             </div>
             <div class="input_group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" v-model="form.password" required/>
+                <input type="password" name="password" id="password" v-model="form.password" placeholder="Password"/>
             </div>
             <button type="submit">Login</button>
-            <p>Don't have an account?<RouterLink :to="{ name:'register'}">Register</RouterLink></p>
+            <p><router-link :to="{ name:'forgot-password' }">Forgot password?</router-link></p>
+            <p class="links">Don't have an account?<RouterLink :to="{ name:'register'}">Register</RouterLink></p>
         </form>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import axios from '../axios';
+import axios from '@/axios';
 import { useRouter } from 'vue-router';
 
 const router = useRouter()
@@ -19,12 +19,10 @@ const errorMessage = ref({
 });
 const handleRegister = async () => {
     try {
-        // Reset error messages
         for (const key in errorMessage.value) {
             errorMessage.value[key] = '';
         }
 
-        // Validate password confirmation
         if (form.value.password !== form.value.password_confirmation) {
             errorMessage.value.password_confirmation = 'Passwords do not match';
             return;
@@ -68,7 +66,7 @@ const handleRegister = async () => {
                 <span class="error" v-if="errorMessage.password_confirmation">{{ errorMessage.password_confirmation }}</span>
             </div>
             <button type="submit">Register</button>
-            <p class="link"> Already have an account?<a href="/login" class="register">Login</a></P>
+            <p class="link"> Already have an account?<router-link :to="{ name:'login' }">Login</router-link></P>
         </form>
     </div> 
 </template>

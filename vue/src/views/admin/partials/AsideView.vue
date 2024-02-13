@@ -3,10 +3,10 @@
 <template>
     <div class="admin_sidenav">
         <div class="logo">
-            <a >
+            <router-link :to="{ name:'home'}">
                 <img src="../../../assets/images/shop.jpg" alt="Shop logo" >
                 <h3>Coffee Shop</h3>
-            </a>
+            </router-link>
         </div>
         <div class="nav_links">
             <li><i class="fas fa-tachometer-alt"></i><router-link :to="{name:'admin-dashboard'}">Dashboard</router-link></li>
