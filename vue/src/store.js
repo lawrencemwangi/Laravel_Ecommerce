@@ -45,6 +45,22 @@ const store = createStore({
               }
             }
         },
+        async passwordReset({commit}, email, token) {
+            try {
+                await axios.post('/reset-password',{ email, token} );
+                commit('Password reset successfully');
+                router.push('/login');
+            } catch (error) {
+                if (error.response && error.response.status === 422) {
+                    console.error('Password reset failed: Validation error');
+                } else if (error.response && error.response.status === 404) {
+                    console.error('Password reset failed: User not found');
+                } else {
+                    console.error('An error occurred during password reset:', error.message);
+                }
+            }
+        },
+       
     },
 
     mutations: {

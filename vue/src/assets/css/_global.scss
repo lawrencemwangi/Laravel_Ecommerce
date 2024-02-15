@@ -41,6 +41,16 @@ a{
     color:$primary-color;
     background: red;
 }
+.success{
+    padding:0.3em 0.9em;
+    color:$secodary-color;
+    border-radius: 8px;
+    background:$price-color;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
 .logout{
     background:red;
 }

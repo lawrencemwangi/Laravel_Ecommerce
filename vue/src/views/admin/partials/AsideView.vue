@@ -17,7 +17,7 @@
             <li><i></i><router-link :to="{name:'admin-orders'}">Orders</router-link></li>
         </div>
 
-        <div class="logout">
+        <div class="image">
             <img src="../../../assets/images/mwangi.jpg" alt="photo">
             <button class="btn"><a href="#">Logout</a></button>
         </div>

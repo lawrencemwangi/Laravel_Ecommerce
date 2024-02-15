@@ -1,0 +1,19 @@
+.dashboard_container{
+    @include grid(5);
+    padding:0.9em 0;
+
+    .dashboard_content{
+        @include flex_center;
+        justify-content: left;
+        align-items: center;
+        flex-direction: row;
+        background: $primary-color;
+        padding:0.4em 0.9em;
+        color:$secodary-color;
+        border-radius: 16px;
+
+        i{
+            font-size: 1.6em; 
+        }
+    }
+}
