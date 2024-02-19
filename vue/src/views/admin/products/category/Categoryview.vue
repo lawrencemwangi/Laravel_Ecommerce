@@ -13,9 +13,17 @@ onMounted(() => getCategories());
         <Aside/>
 
         <section class="main_content">
+            <div class="link_nav">
+                <div class="links">
+                    <RouterLink :to="{ name:'admin-products' }">Products</RouterLink>
+                </div>
+                <div class="links">
+                    <RouterLink :to="{ name:'admin-category' }">Categories</RouterLink>
+                </div>
+            </div>
             <div class="heading">
                 <h1>Categories</h1>
-                <RouterLink :to="{ name:'admin-products' }">Products</RouterLink>
+                <input type="text" name="search" id="search" placeholder="Search Here">
                 <button class="btn">
                     <router-link :to="{name:'admin-category-add'}">  Add New</router-link>
                 </button>

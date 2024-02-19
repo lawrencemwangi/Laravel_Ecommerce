@@ -6,8 +6,22 @@ import Aside from './partials/AsideView.vue'
     <main class="Admin">
         <Aside/>
         <section class="main_content">
-            <h1>Products</h1>
-            <RouterLink :to="{ name:'admin-category' }">Categories</RouterLink>
+            <div class="link_nav">
+                <div class="links">
+                    <RouterLink :to="{ name:'admin-category' }" >Categories</RouterLink>
+                </div>
+                <div class="links">
+                    <RouterLink :to="{ name:'admin-products' }">Products</RouterLink>
+                </div>
+            </div>
+            <div class="heading">
+                <h1>Products</h1>
+                <input type="text" name="search" id="search" placeholder="Search Here">
+                <button class="btn">
+                    <router-link :to="{name:'admin-category-add'}">  Add New</router-link>
+                </button>
+            </div>
+
             <div class="table">
                 <table>
                     <thead>

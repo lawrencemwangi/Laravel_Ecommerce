@@ -22,15 +22,20 @@
 
     .nav_links{
         padding:0.5em 0.3em;
+        // *{border:1px solid green}
       li{
             list-style: none;
             padding:0.9em 0;
             border-bottom: 1px solid grey;
-
+            
             a{
                 text-decoration: none;
                 color:$secodary-color;
-                font-weight: bold;
+                font-weight: bold;  
+            }
+            i{
+                font-size: 1.2em;
+                padding:0 0.4em;
             }
         }
     }

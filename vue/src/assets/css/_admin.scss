@@ -67,5 +67,27 @@
                 }
             }
         }
+        .link_nav{
+            @include flex-center;
+            flex-direction: row;
+            justify-content: left;
+            padding:0.5em 0;
+           
+
+            .links{
+                padding:0 0.5em;
+                font-weight: bold;
+                font-size: 1.2em;
+                padding:0.3em 0.7em;
+                background: $primary-color;
+                border-radius: 0 20px 0;
+
+                a{
+                    text-decoration: none;
+                    color:$secodary-color;
+
+                }
+            }
+        }
     }
 }

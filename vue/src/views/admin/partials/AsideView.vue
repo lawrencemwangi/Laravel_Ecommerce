@@ -10,11 +10,11 @@
         </div>
         <div class="nav_links">
             <li><i class="fas fa-tachometer-alt"></i><router-link :to="{name:'admin-dashboard'}">Dashboard</router-link></li>
-            <li><i class="fas fa-tachometer-alt"></i><router-link :to="{name:'admin-admins'}">Admins</router-link></li>
+            <li><i class="fas fa-user-lock"></i><router-link :to="{name:'admin-admins'}">Admins</router-link></li>
             <li><i class="fas fa-users"></i><router-link :to="{name:'admin-users'}">Users</router-link></li>
-            <li><i class=""></i> <router-link :to="{name:'admin-products'}">Products</router-link></li>
-            <li><i class=""></i><router-link :to="{name:'admin-location'}">Locations</router-link></li>
-            <li><i></i><router-link :to="{name:'admin-orders'}">Orders</router-link></li>
+            <li><i class="fas fa-tags"></i><router-link :to="{name:'admin-products'}">Products</router-link></li>
+            <li><i class="fas fa-map-marked-alt"></i><router-link :to="{name:'admin-location'}">Locations</router-link></li>
+            <li><i class="fas fa-truck-loading"></i><router-link :to="{name:'admin-orders'}">Orders</router-link></li>
         </div>
 
         <div class="image">
