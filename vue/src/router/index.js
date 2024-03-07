@@ -79,6 +79,11 @@ const router = createRouter({
       component: () =>import('@/views/admin/LocationView.vue')
     },
     {
+      path:'/admin/town',
+      name:'admin-towns',
+      component: () =>import('@/views/admin/TownView.vue'),
+    },
+    {
       path:'/forgot-password',
       name:'forgot-password',
       component: () =>import('@/views/auth/ForgotpaswordView.vue')

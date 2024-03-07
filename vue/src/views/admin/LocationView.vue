@@ -6,8 +6,13 @@ import Aside from './partials/AsideView.vue'
     <main class="Admin">
         <Aside/>
         <section class="main_content">
+            <div class="link_nav">
+                <div class="links">
+                    <router-link :to="{ name:'admin-towns'}">Towns</router-link>
+                </div>
+            </div>
             <div class="heading">
-                <h1>Locations</h1>
+                <h1>City</h1>
                 <input type="text" name="search" id="search" placeholder="Search Here">
                 <button class="btn">
                     <router-link :to="{name:'admin-category-add'}">  Add New</router-link>

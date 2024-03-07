@@ -1,25 +1,18 @@
 <script setup>
-import Aside from '../../partials/AsideView.vue';
-import useCategories from '../../../../composables/categoryindex';
-import { onMounted } from 'vue';
-
-const{ categories, getCategories} = useCategories();
-
-onMounted(() => getCategories());
+import Aside from './partials/AsideView.vue'
 </script>
 
 <template>
     <main class="Admin">
         <Aside/>
-
         <section class="main_content">
             <div class="link_nav">
                 <div class="links">
-                    <RouterLink :to="{ name:'admin-products' }">Products</RouterLink>
+                    <router-link :to="{ name:'admin-location' }">City</router-link>
                 </div>
             </div>
             <div class="heading">
-                <h1>Categories</h1>
+                <h1>Towns</h1>
                 <input type="text" name="search" id="search" placeholder="Search Here">
                 <button class="btn">
                     <router-link :to="{name:'admin-category-add'}">  Add New</router-link>
@@ -27,22 +20,20 @@ onMounted(() => getCategories());
             </div>
 
             <div class="table">
-                <table >
+                <table>
                     <thead>
                         <tr>
-                            <th>Category</th>
-                            <th>Slug</th>
+                            <th>City</th>
+                            <th>Town</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="category in categories" :key="category.id">
-                            <td>{{ category.title }}</td>                            
-                            <td>{{ category.slug }}</td>
-                            <td> <router-link :to ="{ name: 'admin-category-update' }">
-                                <i class="fas fa-pencil-alt"></i></router-link>
-                            </td>
+                        <tr>
+                            <td>Kiambu</td>
+                            <td>Ruui</td>
+                            <td> <i class="fas fa-pencil-alt"></i></td>
                             <td><i class="fas fa-trash-alt"></i></td>
                         </tr>
                     </tbody>

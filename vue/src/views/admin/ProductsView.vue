@@ -10,15 +10,12 @@ import Aside from './partials/AsideView.vue'
                 <div class="links">
                     <RouterLink :to="{ name:'admin-category' }" >Categories</RouterLink>
                 </div>
-                <div class="links">
-                    <RouterLink :to="{ name:'admin-products' }">Products</RouterLink>
-                </div>
             </div>
             <div class="heading">
                 <h1>Products</h1>
                 <input type="text" name="search" id="search" placeholder="Search Here">
                 <button class="btn">
-                    <router-link :to="{name:'admin-category-add'}">  Add New</router-link>
+                    <router-link :to="{name:'admin-category-add'}">Add New</router-link>
                 </button>
             </div>
 
